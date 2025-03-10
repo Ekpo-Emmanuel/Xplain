@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+# X-Plain with Perplexity
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Chrome extension that allows you to explain selected text or ask questions about it using Perplexity AI.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Explain with Perplexity**: Select text on any webpage and get an explanation directly from Perplexity AI.
+- **Ask Custom Questions**: Select text and ask specific questions about it.
+- **Context Menu Integration**: Right-click on selected text to access the extension features.
+- **In-page Overlay**: Interact with the extension without leaving the current page.
+- **Popup Interface**: Access the extension features from the toolbar.
 
-### `npm start`
+## Technology Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React**: For building the user interface components
+- **TypeScript**: For type safety and better developer experience
+- **Chrome Extension API**: For browser integration
+- **CSS**: For styling the components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+- `public/`: Contains static files and Chrome extension specific files
+  - `manifest.json`: Chrome extension configuration
+  - `background.js`: Background script for the extension
+  - `content.js`: Content script that runs on webpages
+  - `icon*.png`: Extension icons
+- `src/`: Contains React components and TypeScript files
+  - `components/`: React components
+  - `types/`: TypeScript type definitions
+  - `App.tsx`: Main React component
+  - `index.tsx`: Entry point for React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14 or higher)
+- npm or yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm start
+   ```
 
-### `npm run eject`
+### Building for Production
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm run build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This will create a `build` directory with the extension files.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Loading the Extension in Chrome
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Open Chrome and navigate to `chrome://extensions`
+2. Enable "Developer mode"
+3. Click "Load unpacked" and select the `build` directory
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Select text on any webpage
+2. Right-click and choose "Explain with Perplexity" or "Ask Perplexity a Question"
+3. For custom questions, enter your question in the overlay
+4. Click "Submit" to open Perplexity with your query
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
+
+MIT
+
+## Acknowledgements
+
+- Perplexity AI for their powerful question-answering service
