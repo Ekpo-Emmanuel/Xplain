@@ -70,10 +70,6 @@ This will create a `build` directory with the extension files.
 3. For custom questions, enter your question in the overlay
 4. Click "Submit" to open Perplexity with your query
 
-## License
-
-MIT
-
 ## Acknowledgements
 
 - Perplexity AI for their powerful question-answering service
